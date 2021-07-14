@@ -69,7 +69,7 @@
      <string>Username:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Login">
     <property name="geometry">
      <rect>
       <x>340</x>

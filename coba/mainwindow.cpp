@@ -6,10 +6,24 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->Login, SIGNAL(click()), this, SLOT(openSubscribe()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::openSubscribe()
+{
+    mSubscribe=new Subscribe();
+    mSubscribe->show();
+}
+
+
+void MainWindow::on_Login_clicked()
+{
+    openSubscribe();
+    close();
 }
 
