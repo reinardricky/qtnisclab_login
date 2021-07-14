@@ -1,5 +1,6 @@
 #include "mainwindow.h"
-
+#include "utama.h"
+#include "subscribe.h"
 #include <QApplication>
 #include <QLabel>
 
