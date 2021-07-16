@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::Utama *ui;
+//    float sliderToSpin(float);
 };
 
 #endif // UTAMA_H
