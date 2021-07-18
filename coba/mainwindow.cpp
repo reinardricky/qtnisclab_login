@@ -37,9 +37,16 @@ void MainWindow::on_Login_clicked()
         openUtama();
         close();
 
-    }else if (username=="tidaksubs"&& password=="54321") {
+    }else if (username=="tidaksubs" && password=="54321") {
+        openUtama();
         openSubscribe();
         close();
+    }else if(username=="" && password==""){
+        QMessageBox::warning(this,"Login","Username and password is empty");
+    }else if(username==""){
+        QMessageBox::warning(this,"Login","Username is empty");
+    }else if(password==""){
+        QMessageBox::warning(this,"Login","Password is empty");
     }else{
         QMessageBox::warning(this,"Login","Username and password didn't match");
     }
