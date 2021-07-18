@@ -93,6 +93,12 @@
     <property name="text">
      <string>Log In</string>
     </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
@@ -115,6 +121,44 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>LineEdit_username</tabstop>
+  <tabstop>LineEdit_password</tabstop>
+  <tabstop>Login</tabstop>
+ </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>LineEdit_password</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Login</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>171</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>LineEdit_username</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Login</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>299</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
