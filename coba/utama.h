@@ -1,6 +1,6 @@
 #ifndef UTAMA_H
 #define UTAMA_H
-#include "subscribe.h"
+#include "settings.h"
 #include <QWidget>
 
 namespace Ui {
@@ -15,7 +15,7 @@ public:
     explicit Utama(QWidget *parent = nullptr);
     ~Utama();
 public slots:
-   void openSubscribe();
+   void openSettings();
 
 private slots:
 
@@ -85,8 +85,11 @@ private slots:
 
     void on_Lock_8_stateChanged(int arg1);
 
+    void on_Setting_clicked();
+
 private:
     Ui::Utama *ui;
+    Settings *msettings;
 //    float sliderToSpin(float);
 };
 

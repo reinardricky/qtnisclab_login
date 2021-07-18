@@ -6,10 +6,15 @@ Utama::Utama(QWidget *parent) :
     ui(new Ui::Utama)
 {
     ui->setupUi(this);
+    connect(ui->Setting, SIGNAL(click()), this, SLOT(openSettings()));
 //    connect(ui->V_Slider_1,SIGNAL(valueChanged(int)),ui->V_Spin_1,SLOT(SlideToSpin(double)));
 //    connect(ui->V_Spin_1,SIGNAL(valueChanged(double)),ui->V_Slider_1,SLOT(SpinToSlide(int)));
 }
-
+void Utama::openSettings()
+{
+    msettings=new Settings();
+    msettings->show();
+}
 
 
 Utama::~Utama()
@@ -292,3 +297,11 @@ void Utama::on_Lock_8_stateChanged(int arg1)
     ui->I_Slider_8->setDisabled(ui->I_Slider_8->isEnabled());
     ui->I_Spin_8->setReadOnly(ui->I_Spin_8->isReadOnly());
 }
+
+
+
+void Utama::on_Setting_clicked()
+{
+    openSettings();
+}
+
