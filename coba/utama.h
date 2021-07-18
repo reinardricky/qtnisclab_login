@@ -18,7 +18,6 @@ public slots:
    void openSubscribe();
 
 private slots:
-    void on_upgrade_clicked();
 
 //    void on_Pow_Ch_1_clicked(bool checked);
 
@@ -56,7 +55,6 @@ private slots:
 
 private:
     Ui::Utama *ui;
-    Subscribe *mSubscribe;
 //    float sliderToSpin(float);
 };
 

@@ -12,17 +12,23 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     subscribe.cpp \
-    utama.cpp
+    utama.cpp\
+    settings.cpp\
+    paymentwindow.cpp
 
 HEADERS += \
     mainwindow.h \
     subscribe.h \
-    utama.h
+    utama.h\
+    settings.h\
+    paymentwindow.h
 
 FORMS += \
     mainwindow.ui \
     subscribe.ui \
-    utama.ui
+    utama.ui\
+    settings.ui\
+    paymentwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

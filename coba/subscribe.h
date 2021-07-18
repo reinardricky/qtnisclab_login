@@ -2,6 +2,7 @@
 #define SUBSCRIBE_H
 
 #include <QWidget>
+#include "paymentwindow.h"
 //#include "utama.h"
 
 namespace Ui {
@@ -15,7 +16,8 @@ class Subscribe : public QWidget
 public:
     explicit Subscribe(QWidget *parent = nullptr);
     ~Subscribe();
-//public slots:
+public slots:
+    void openPayment();
 //   void openUtama();
 
 private slots:
@@ -24,6 +26,7 @@ private slots:
 
 private:
     Ui::Subscribe *ui;
+    PaymentWindow *mPayment;
 //    Utama *mUtama;
 };
 

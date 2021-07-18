@@ -5,8 +5,11 @@ Subscribe::Subscribe(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Subscribe)
 {
+    setWindowModality(Qt::ApplicationModal);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
     ui->setupUi(this);
-//    connect(ui->Paysub, SIGNAL(click()), this, SLOT(openUtama()));
+//    connect(ui->Paysub, SIGNAL(click()), this, SLOT(openUtama()))
+    connect(ui->Paysub, SIGNAL(click()), this, SLOT(openPayment()));
 }
 
 Subscribe::~Subscribe()
@@ -20,9 +23,16 @@ Subscribe::~Subscribe()
 //    mUtama->show();
 //}
 
+void Subscribe::openPayment()
+{
+    mPayment=new PaymentWindow();
+    mPayment->show();
+}
+
 void Subscribe::on_Paysub_clicked()
 {
 //    openUtama();
+    openPayment();
     close();
 }
 

@@ -33,7 +33,7 @@ void MainWindow::on_Login_clicked()
     QString username= ui->LineEdit_username->text();
     QString password= ui->LineEdit_password->text();
 
-    if(username=="orangsudahsubs" && password=="12345"){
+    if(username=="sudahsubs" && password=="12345"){
         openUtama();
         close();
 

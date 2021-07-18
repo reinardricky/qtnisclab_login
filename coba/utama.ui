@@ -57,13 +57,6 @@
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignRight">
-        <widget class="QPushButton" name="upgrade">
-         <property name="text">
-          <string>Upgrade Now</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </item>
      <item>
