@@ -20,7 +20,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="LineEdit_password">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -46,7 +46,7 @@
      <string>Password:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="LineEdit_username">
     <property name="geometry">
      <rect>
       <x>260</x>

@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -7,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     connect(ui->Login, SIGNAL(click()), this, SLOT(openSubscribe()));
+    connect(ui->Login, SIGNAL(click()), this, SLOT(openUtama()));
 }
 
 MainWindow::~MainWindow()
@@ -20,10 +22,27 @@ void MainWindow::openSubscribe()
     mSubscribe->show();
 }
 
+void MainWindow::openUtama()
+{
+    mUtama=new Utama();
+    mUtama->show();
+}
 
 void MainWindow::on_Login_clicked()
 {
-    openSubscribe();
-    close();
+    QString username= ui->LineEdit_username->text();
+    QString password= ui->LineEdit_password->text();
+
+    if(username=="orangsudahsubs" && password=="12345"){
+        openUtama();
+        close();
+
+    }else if (username=="tidaksubs"&& password=="54321") {
+        openSubscribe();
+        close();
+    }else{
+        QMessageBox::warning(this,"Login","Username and password didn't match");
+    }
+
 }
 

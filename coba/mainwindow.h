@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "subscribe.h"
+#include "utama.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,6 +18,7 @@ public:
     ~MainWindow();
 public slots:
    void openSubscribe();
+   void openUtama();
 
 private slots:
 
@@ -25,5 +27,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Subscribe *mSubscribe;
+    Utama *mUtama;
 };
 #endif // MAINWINDOW_H
