@@ -9,9 +9,10 @@ PaymentWindow::PaymentWindow(QWidget *parent) :
 {
     setWindowModality(Qt::ApplicationModal);
     setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
+    setWindowFlags(Qt::Window
+        | Qt::WindowMinimizeButtonHint
+        | Qt::WindowMaximizeButtonHint);
     ui->setupUi(this);
-    ui->lineEdit_number->setInputMask("0000 0000 0000 0000");
-    ui->lineEdit_date->setInputMask("00/00");
 //    connect(ui->payButton, SIGNAL(click()), this, SLOT(openUtama()));
 }
 

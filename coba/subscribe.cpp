@@ -7,6 +7,9 @@ Subscribe::Subscribe(QWidget *parent) :
 {
     setWindowModality(Qt::ApplicationModal);
     setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
+    setWindowFlags(Qt::Window
+        | Qt::WindowMinimizeButtonHint
+        | Qt::WindowMaximizeButtonHint);
     ui->setupUi(this);
 //    connect(ui->Paysub, SIGNAL(click()), this, SLOT(openUtama()))
     connect(ui->Paysub, SIGNAL(click()), this, SLOT(openPayment()));
