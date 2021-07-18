@@ -2,7 +2,7 @@
 #define SUBSCRIBE_H
 
 #include <QWidget>
-#include "utama.h"
+//#include "utama.h"
 
 namespace Ui {
 class Subscribe;
@@ -15,8 +15,8 @@ class Subscribe : public QWidget
 public:
     explicit Subscribe(QWidget *parent = nullptr);
     ~Subscribe();
-public slots:
-   void openUtama();
+//public slots:
+//   void openUtama();
 
 private slots:
 
@@ -24,7 +24,7 @@ private slots:
 
 private:
     Ui::Subscribe *ui;
-    Utama *mUtama;
+//    Utama *mUtama;
 };
 
 #endif // SUBSCRIBE_H

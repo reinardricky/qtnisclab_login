@@ -6,7 +6,7 @@ Subscribe::Subscribe(QWidget *parent) :
     ui(new Ui::Subscribe)
 {
     ui->setupUi(this);
-    connect(ui->Paysub, SIGNAL(click()), this, SLOT(openUtama()));
+//    connect(ui->Paysub, SIGNAL(click()), this, SLOT(openUtama()));
 }
 
 Subscribe::~Subscribe()
@@ -14,15 +14,15 @@ Subscribe::~Subscribe()
     delete ui;
 }
 
-void Subscribe::openUtama()
-{
-    mUtama=new Utama();
-    mUtama->show();
-}
+//void Subscribe::openUtama()
+//{
+//    mUtama=new Utama();
+//    mUtama->show();
+//}
 
 void Subscribe::on_Paysub_clicked()
 {
-    openUtama();
+//    openUtama();
     close();
 }
 
