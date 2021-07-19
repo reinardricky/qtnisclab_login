@@ -85,7 +85,7 @@ private slots:
 
     void on_Lock_8_stateChanged(int arg1);
 
-    void on_Setting_clicked();
+    void on_Settings_clicked();
 
 private:
     Ui::Utama *ui;
