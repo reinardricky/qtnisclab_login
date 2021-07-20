@@ -28,9 +28,9 @@ PaymentWindow::~PaymentWindow()
 //}
 
 
-QString cardNumberValid = "1111222233334444";
+QString cardNumberValid = "1111 2222 3333 4444";
 QString nameValid = "Nama Asli";
-QString expiryDateValid = "0112";
+QString expiryDateValid = "01/12";
 QString cvvValid = "567";
 
 void PaymentWindow::on_payButton_clicked()
