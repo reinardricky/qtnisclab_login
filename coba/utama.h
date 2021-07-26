@@ -87,6 +87,38 @@ private slots:
 
     void on_Settings_clicked();
 
+    void on_V_Spin_1_valueChanged(double arg1);
+
+    void on_V_Spin_2_valueChanged(double arg1);
+
+    void on_V_Spin_3_valueChanged(double arg1);
+
+    void on_V_Spin_4_valueChanged(double arg1);
+
+    void on_V_Spin_5_valueChanged(double arg1);
+
+    void on_V_Spin_6_valueChanged(double arg1);
+
+    void on_V_Spin_7_valueChanged(double arg1);
+
+    void on_V_Spin_8_valueChanged(double arg1);
+
+    void on_I_Spin_1_valueChanged(double arg1);
+
+    void on_I_Spin_2_valueChanged(double arg1);
+
+    void on_I_Spin_3_valueChanged(double arg1);
+
+    void on_I_Spin_4_valueChanged(double arg1);
+
+    void on_I_Spin_5_valueChanged(double arg1);
+
+    void on_I_Spin_6_valueChanged(double arg1);
+
+    void on_I_Spin_7_valueChanged(double arg1);
+
+    void on_I_Spin_8_valueChanged(double arg1);
+
 private:
     Ui::Utama *ui;
     Settings *msettings;
