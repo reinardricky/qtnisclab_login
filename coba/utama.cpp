@@ -2,6 +2,7 @@
 #include "ui_utama.h"
 #include "qdebug.h"
 #include "qdatetime.h"
+#include "settings.h"
 
 Utama::Utama(QWidget *parent) :
     QWidget(parent),
@@ -10,39 +11,7 @@ Utama::Utama(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->Settings, SIGNAL(click()), this, SLOT(openSettings()));
 
-    ui->V_Slider_1->setRange(0,(128*static_cast<int>(ui->V_Spin_1->maximum())));
-    ui->V_Spin_1->setSingleStep((ui->V_Spin_1->maximum())*0.025);
-    ui->V_Slider_2->setRange(0,(128*static_cast<int>(ui->V_Spin_2->maximum())));
-    ui->V_Spin_2->setSingleStep((ui->V_Spin_2->maximum())*0.025);
-    ui->V_Slider_3->setRange(0,(128*static_cast<int>(ui->V_Spin_3->maximum())));
-    ui->V_Spin_3->setSingleStep((ui->V_Spin_3->maximum())*0.025);
-    ui->V_Slider_4->setRange(0,(128*static_cast<int>(ui->V_Spin_4->maximum())));
-    ui->V_Spin_4->setSingleStep((ui->V_Spin_4->maximum())*0.025);
-    ui->V_Slider_5->setRange(0,(128*static_cast<int>(ui->V_Spin_5->maximum())));
-    ui->V_Spin_5->setSingleStep((ui->V_Spin_5->maximum())*0.025);
-    ui->V_Slider_6->setRange(0,(128*static_cast<int>(ui->V_Spin_6->maximum())));
-    ui->V_Spin_6->setSingleStep((ui->V_Spin_6->maximum())*0.025);
-    ui->V_Slider_7->setRange(0,(128*static_cast<int>(ui->V_Spin_7->maximum())));
-    ui->V_Spin_7->setSingleStep((ui->V_Spin_7->maximum())*0.025);
-    ui->V_Slider_8->setRange(0,(128*static_cast<int>(ui->V_Spin_8->maximum())));
-    ui->V_Spin_8->setSingleStep((ui->V_Spin_8->maximum())*0.025);
-
-    ui->I_Slider_1->setRange(0,128*static_cast<int>(ui->I_Spin_1->maximum()));
-    ui->I_Spin_1->setSingleStep((ui->I_Spin_1->maximum())*0.025);
-    ui->I_Slider_2->setRange(0,128*static_cast<int>(ui->I_Spin_2->maximum()));
-    ui->I_Spin_2->setSingleStep((ui->I_Spin_2->maximum())*0.025);
-    ui->I_Slider_3->setRange(0,128*static_cast<int>(ui->I_Spin_3->maximum()));
-    ui->I_Spin_3->setSingleStep((ui->I_Spin_3->maximum())*0.025);
-    ui->I_Slider_4->setRange(0,128*static_cast<int>(ui->I_Spin_4->maximum()));
-    ui->I_Spin_4->setSingleStep((ui->I_Spin_4->maximum())*0.025);
-    ui->I_Slider_5->setRange(0,128*static_cast<int>(ui->I_Spin_5->maximum()));
-    ui->I_Spin_5->setSingleStep((ui->I_Spin_5->maximum())*0.025);
-    ui->I_Slider_6->setRange(0,128*static_cast<int>(ui->I_Spin_6->maximum()));
-    ui->I_Spin_6->setSingleStep((ui->I_Spin_6->maximum())*0.025);
-    ui->I_Slider_7->setRange(0,128*static_cast<int>(ui->I_Spin_7->maximum()));
-    ui->I_Spin_7->setSingleStep((ui->I_Spin_7->maximum())*0.025);
-    ui->I_Slider_8->setRange(0,128*static_cast<int>(ui->I_Spin_8->maximum()));
-    ui->I_Spin_8->setSingleStep((ui->I_Spin_8->maximum())*0.025);
+    setupSlideSpin();
 
 //    connect(ui->V_Slider_1,SIGNAL(valueChanged(int val)),ui->V_Spin_1,SLOT(SlideToSpin(double val)));
 //   connect(ui->V_Spin_1,SIGNAL(valueChanged(double arg1)),ui->V_Slider_1,SLOT(setValue(int arg1)));
@@ -53,13 +22,64 @@ Utama::~Utama()
     delete ui;
 }
 
+void Utama::setupSlideSpin() //set max range of slider and step size of slider and spin box
+{
+    ui->V_Slider_1->setRange(0,(128*static_cast<int>(ui->V_Spin_1->maximum())));
+    ui->V_Spin_1->setSingleStep((ui->V_Spin_1->maximum())*0.025);
+    ui->V_Slider_1->setSingleStep(ui->V_Slider_1->maximum()*0.025);
+    ui->V_Slider_2->setRange(0,(128*static_cast<int>(ui->V_Spin_2->maximum())));
+    ui->V_Spin_2->setSingleStep((ui->V_Spin_2->maximum())*0.025);
+    ui->V_Slider_2->setSingleStep(ui->V_Slider_2->maximum()*0.025);
+    ui->V_Slider_3->setRange(0,(128*static_cast<int>(ui->V_Spin_3->maximum())));
+    ui->V_Spin_3->setSingleStep((ui->V_Spin_3->maximum())*0.025);
+    ui->V_Slider_3->setSingleStep(ui->V_Slider_3->maximum()*0.025);
+    ui->V_Slider_4->setRange(0,(128*static_cast<int>(ui->V_Spin_4->maximum())));
+    ui->V_Spin_4->setSingleStep((ui->V_Spin_4->maximum())*0.025);
+    ui->V_Slider_4->setSingleStep(ui->V_Slider_4->maximum()*0.025);
+    ui->V_Slider_5->setRange(0,(128*static_cast<int>(ui->V_Spin_5->maximum())));
+    ui->V_Spin_5->setSingleStep((ui->V_Spin_5->maximum())*0.025);
+    ui->V_Slider_5->setSingleStep(ui->V_Slider_5->maximum()*0.025);
+    ui->V_Slider_6->setRange(0,(128*static_cast<int>(ui->V_Spin_6->maximum())));
+    ui->V_Spin_6->setSingleStep((ui->V_Spin_6->maximum())*0.025);
+    ui->V_Slider_6->setSingleStep(ui->V_Slider_6->maximum()*0.025);
+    ui->V_Slider_7->setRange(0,(128*static_cast<int>(ui->V_Spin_7->maximum())));
+    ui->V_Spin_7->setSingleStep((ui->V_Spin_7->maximum())*0.025);
+    ui->V_Slider_7->setSingleStep(ui->V_Slider_7->maximum()*0.025);
+    ui->V_Slider_8->setRange(0,(128*static_cast<int>(ui->V_Spin_8->maximum())));
+    ui->V_Spin_8->setSingleStep((ui->V_Spin_8->maximum())*0.025);
+    ui->V_Slider_8->setSingleStep(ui->V_Slider_8->maximum()*0.025);
+
+    ui->I_Slider_1->setRange(0,128*static_cast<int>(ui->I_Spin_1->maximum()));
+    ui->I_Spin_1->setSingleStep((ui->I_Spin_1->maximum())*0.025);
+    ui->I_Slider_1->setSingleStep(ui->I_Slider_1->maximum()*0.025);
+    ui->I_Slider_2->setRange(0,128*static_cast<int>(ui->I_Spin_2->maximum()));
+    ui->I_Spin_2->setSingleStep((ui->I_Spin_2->maximum())*0.025);
+    ui->I_Slider_2->setSingleStep(ui->I_Slider_2->maximum()*0.025);
+    ui->I_Slider_3->setRange(0,128*static_cast<int>(ui->I_Spin_3->maximum()));
+    ui->I_Spin_3->setSingleStep((ui->I_Spin_3->maximum())*0.025);
+    ui->I_Slider_3->setSingleStep(ui->I_Slider_3->maximum()*0.025);
+    ui->I_Slider_4->setRange(0,128*static_cast<int>(ui->I_Spin_4->maximum()));
+    ui->I_Spin_4->setSingleStep((ui->I_Spin_4->maximum())*0.025);
+    ui->I_Slider_4->setSingleStep(ui->I_Slider_4->maximum()*0.025);
+    ui->I_Slider_5->setRange(0,128*static_cast<int>(ui->I_Spin_5->maximum()));
+    ui->I_Spin_5->setSingleStep((ui->I_Spin_5->maximum())*0.025);
+    ui->I_Slider_5->setSingleStep(ui->I_Slider_5->maximum()*0.025);
+    ui->I_Slider_6->setRange(0,128*static_cast<int>(ui->I_Spin_6->maximum()));
+    ui->I_Spin_6->setSingleStep((ui->I_Spin_6->maximum())*0.025);
+    ui->I_Slider_6->setSingleStep(ui->I_Slider_6->maximum()*0.025);
+    ui->I_Slider_7->setRange(0,128*static_cast<int>(ui->I_Spin_7->maximum()));
+    ui->I_Spin_7->setSingleStep((ui->I_Spin_7->maximum())*0.025);
+    ui->I_Slider_7->setSingleStep(ui->I_Slider_7->maximum()*0.025);
+    ui->I_Slider_8->setRange(0,128*static_cast<int>(ui->I_Spin_8->maximum()));
+    ui->I_Spin_8->setSingleStep((ui->I_Spin_8->maximum())*0.025);
+    ui->I_Slider_8->setSingleStep(ui->I_Slider_8->maximum()*0.025);
+}
+
 void Utama::openSettings()
 {
     msettings=new Settings();
     msettings->show();
 }
-
-//slider to spinbox
 
 void Utama::on_V_Slider_1_valueChanged(int value)
 {
