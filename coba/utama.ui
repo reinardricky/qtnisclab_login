@@ -1187,7 +1187,7 @@
                 <string> V</string>
                </property>
                <property name="maximum">
-                <double>10.000000000000000</double>
+                <double>12.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.300000000000000</double>
@@ -1203,7 +1203,7 @@
                 <string> V</string>
                </property>
                <property name="maximum">
-                <double>10.000000000000000</double>
+                <double>12.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.300000000000000</double>
@@ -1219,7 +1219,7 @@
                 <string> V</string>
                </property>
                <property name="maximum">
-                <double>10.000000000000000</double>
+                <double>12.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.300000000000000</double>
@@ -1235,7 +1235,7 @@
                 <string> V</string>
                </property>
                <property name="maximum">
-                <double>10.000000000000000</double>
+                <double>12.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.300000000000000</double>
@@ -1251,7 +1251,7 @@
                 <string> V</string>
                </property>
                <property name="maximum">
-                <double>10.000000000000000</double>
+                <double>12.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.300000000000000</double>
@@ -1267,7 +1267,7 @@
                 <string> V</string>
                </property>
                <property name="maximum">
-                <double>10.000000000000000</double>
+                <double>12.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.300000000000000</double>
@@ -1283,7 +1283,7 @@
                 <string> V</string>
                </property>
                <property name="maximum">
-                <double>10.000000000000000</double>
+                <double>12.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.300000000000000</double>
@@ -1547,7 +1547,7 @@
                 <string> mA</string>
                </property>
                <property name="maximum">
-                <double>2000.000000000000000</double>
+                <double>500.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.100000000000000</double>
@@ -1563,7 +1563,7 @@
                 <string> mA</string>
                </property>
                <property name="maximum">
-                <double>2000.000000000000000</double>
+                <double>500.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.100000000000000</double>
@@ -1579,7 +1579,7 @@
                 <string> mA</string>
                </property>
                <property name="maximum">
-                <double>2000.000000000000000</double>
+                <double>500.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.100000000000000</double>
@@ -1595,7 +1595,7 @@
                 <string> mA</string>
                </property>
                <property name="maximum">
-                <double>2000.000000000000000</double>
+                <double>500.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.100000000000000</double>
@@ -1611,7 +1611,7 @@
                 <string> mA</string>
                </property>
                <property name="maximum">
-                <double>2000.000000000000000</double>
+                <double>500.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.100000000000000</double>
@@ -1627,7 +1627,7 @@
                 <string> mA</string>
                </property>
                <property name="maximum">
-                <double>2000.000000000000000</double>
+                <double>500.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.100000000000000</double>
@@ -1643,7 +1643,7 @@
                 <string> mA</string>
                </property>
                <property name="maximum">
-                <double>2000.000000000000000</double>
+                <double>500.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.100000000000000</double>
@@ -1659,7 +1659,7 @@
                 <string> mA</string>
                </property>
                <property name="maximum">
-                <double>2000.000000000000000</double>
+                <double>500.000000000000000</double>
                </property>
                <property name="singleStep">
                 <double>0.100000000000000</double>
