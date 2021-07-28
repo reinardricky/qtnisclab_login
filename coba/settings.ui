@@ -595,12 +595,12 @@
     <widget class="QPushButton" name="defaultButton">
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>100</width>
        <height>16777215</height>
       </size>
      </property>
      <property name="text">
-      <string>Reset Default</string>
+      <string>Restore Defaults</string>
      </property>
     </widget>
    </item>
