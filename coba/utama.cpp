@@ -12,18 +12,26 @@ Utama::Utama(QWidget *parent) :
     ui(new Ui::Utama)
 {
     ui->setupUi(this);
+
+    //color for fun; kalau mau pake warna yang sama tinggal copas file window.cpp nya
     qApp->setStyle(QStyleFactory::create("Fusion"));
 
     QPalette darkPalette;
     darkPalette.setColor(QPalette::Window, QColor(45,45,45));
     darkPalette.setColor(QPalette::WindowText, Qt::white);
-    darkPalette.setColor(QPalette::Base, QColor(25,25,25));
+    darkPalette.setColor(QPalette::Active,QPalette::Base, QColor(75,75,75));
+    darkPalette.setColor(QPalette::Disabled,QPalette::Base,QColor(148, 148, 148));
     darkPalette.setColor(QPalette::AlternateBase, QColor(53,53,53));
     darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
     darkPalette.setColor(QPalette::ToolTipText, Qt::white);
-    darkPalette.setColor(QPalette::Text, Qt::white);
-    darkPalette.setColor(QPalette::Button, QColor(53,53,53));
-    darkPalette.setColor(QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::Active,QPalette::Text, Qt::white);
+    darkPalette.setColor(QPalette::Disabled,QPalette::Text,QColor(200,200,200));
+    darkPalette.setColor(QPalette::Active,QPalette::Button, QColor(53,53,53));
+    darkPalette.setColor(QPalette::Inactive,QPalette::Button,QColor(148, 148, 148));
+    darkPalette.setColor(QPalette::Disabled,QPalette::Button,QColor(148, 148, 148));
+    darkPalette.setColor(QPalette::Active,QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::Inactive,QPalette::ButtonText,QColor(200,200,200));
+    darkPalette.setColor(QPalette::Disabled,QPalette::ButtonText,QColor(200,200,200));
     darkPalette.setColor(QPalette::BrightText, Qt::red);
     darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
 
@@ -33,6 +41,8 @@ Utama::Utama(QWidget *parent) :
     qApp->setPalette(darkPalette);
 
     qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
+
+    ui->mainSwitch->setChecked(false);
 
     connect(ui->Settings, SIGNAL(click()), this, SLOT(openSettings()));
 
@@ -537,74 +547,74 @@ void Utama::on_Pow_Ch_8_clicked()
 void Utama::on_Lock_1_stateChanged(int arg1)
 {
     qDebug()<<"lock 1 = "<<arg1;
-    ui->V_Slider_1->setDisabled(ui->V_Slider_1->isEnabled());
-    ui->V_Spin_1->setDisabled(ui->V_Spin_1->isEnabled());
-    ui->I_Slider_1->setDisabled(ui->I_Slider_1->isEnabled());
-    ui->I_Spin_1->setDisabled(ui->I_Spin_1->isEnabled());
+    ui->V_Slider_1->setDisabled(arg1);
+    ui->V_Spin_1->setDisabled(arg1);
+    ui->I_Slider_1->setDisabled(arg1);
+    ui->I_Spin_1->setDisabled(arg1);
 
 }
 
 void Utama::on_Lock_2_stateChanged(int arg1)
 {
     qDebug()<<"lock 2 = "<<arg1;
-    ui->V_Slider_2->setDisabled(ui->V_Slider_2->isEnabled());
-    ui->V_Spin_2->setDisabled(ui->V_Spin_2->isEnabled());
-    ui->I_Slider_2->setDisabled(ui->I_Slider_2->isEnabled());
-    ui->I_Spin_2->setDisabled(ui->I_Spin_2->isEnabled());
+    ui->V_Slider_2->setDisabled(arg1);
+    ui->V_Spin_2->setDisabled(arg1);
+    ui->I_Slider_2->setDisabled(arg1);
+    ui->I_Spin_2->setDisabled(arg1);
 }
 
 void Utama::on_Lock_3_stateChanged(int arg1)
 {
     qDebug()<<"lock 3 = "<<arg1;
-    ui->V_Slider_3->setDisabled(ui->V_Slider_3->isEnabled());
-    ui->V_Spin_3->setDisabled(ui->V_Spin_3->isEnabled());
-    ui->I_Slider_3->setDisabled(ui->I_Slider_3->isEnabled());
-    ui->I_Spin_3->setDisabled(ui->I_Spin_3->isEnabled());
+    ui->V_Slider_3->setDisabled(arg1);
+    ui->V_Spin_3->setDisabled(arg1);
+    ui->I_Slider_3->setDisabled(arg1);
+    ui->I_Spin_3->setDisabled(arg1);
 }
 
 void Utama::on_Lock_4_stateChanged(int arg1)
 {
     qDebug()<<"lock 4 = "<<arg1;
-    ui->V_Slider_4->setDisabled(ui->V_Slider_4->isEnabled());
-    ui->V_Spin_4->setDisabled(ui->V_Spin_4->isEnabled());
-    ui->I_Slider_4->setDisabled(ui->I_Slider_4->isEnabled());
-    ui->I_Spin_4->setDisabled(ui->I_Spin_4->isEnabled());
+    ui->V_Slider_4->setDisabled(arg1);
+    ui->V_Spin_4->setDisabled(arg1);
+    ui->I_Slider_4->setDisabled(arg1);
+    ui->I_Spin_4->setDisabled(arg1);
 }
 
 void Utama::on_Lock_5_stateChanged(int arg1)
 {
     qDebug()<<"lock 5 = "<<arg1;
-    ui->V_Slider_5->setDisabled(ui->V_Slider_5->isEnabled());
-    ui->V_Spin_5->setDisabled(ui->V_Spin_5->isEnabled());
-    ui->I_Slider_5->setDisabled(ui->I_Slider_5->isEnabled());
-    ui->I_Spin_5->setDisabled(ui->I_Spin_5->isEnabled());
+    ui->V_Slider_5->setDisabled(arg1);
+    ui->V_Spin_5->setDisabled(arg1);
+    ui->I_Slider_5->setDisabled(arg1);
+    ui->I_Spin_5->setDisabled(arg1);
 }
 
 void Utama::on_Lock_6_stateChanged(int arg1)
 {
     qDebug()<<"lock 6 = "<<arg1;
-    ui->V_Slider_6->setDisabled(ui->V_Slider_6->isEnabled());
-    ui->V_Spin_6->setDisabled(ui->V_Spin_6->isEnabled());
-    ui->I_Slider_6->setDisabled(ui->I_Slider_6->isEnabled());
-    ui->I_Spin_6->setDisabled(ui->I_Spin_6->isEnabled());
+    ui->V_Slider_6->setDisabled(arg1);
+    ui->V_Spin_6->setDisabled(arg1);
+    ui->I_Slider_6->setDisabled(arg1);
+    ui->I_Spin_6->setDisabled(arg1);
 }
 
 void Utama::on_Lock_7_stateChanged(int arg1)
 {
     qDebug()<<"lock 7 = "<<arg1;
-    ui->V_Slider_7->setDisabled(ui->V_Slider_7->isEnabled());
-    ui->V_Spin_7->setDisabled(ui->V_Spin_7->isEnabled());
-    ui->I_Slider_7->setDisabled(ui->I_Slider_7->isEnabled());
-    ui->I_Spin_7->setDisabled(ui->I_Spin_7->isEnabled());
+    ui->V_Slider_7->setDisabled(arg1);
+    ui->V_Spin_7->setDisabled(arg1);
+    ui->I_Slider_7->setDisabled(arg1);
+    ui->I_Spin_7->setDisabled(arg1);
 }
 
 void Utama::on_Lock_8_stateChanged(int arg1)
 {
     qDebug()<<"lock 8 = "<<arg1;
-    ui->V_Slider_8->setDisabled(ui->V_Slider_8->isEnabled());
-    ui->V_Spin_8->setDisabled(ui->V_Spin_8->isEnabled());
-    ui->I_Slider_8->setDisabled(ui->I_Slider_8->isEnabled());
-    ui->I_Spin_8->setDisabled(ui->I_Spin_8->isEnabled());
+    ui->V_Slider_8->setDisabled(arg1);
+    ui->V_Spin_8->setDisabled(arg1);
+    ui->I_Slider_8->setDisabled(arg1);
+    ui->I_Spin_8->setDisabled(arg1);
 }
 
 void Utama::on_Settings_clicked()
@@ -761,5 +771,27 @@ void Utama::on_I_Spin_8_valueChanged(double arg1)
 
     int t = static_cast<int>(round(s/ui->I_Spin_8->maximum()*ui->I_Slider_8->maximum()));
     ui->I_Slider_8->setValue(t);
+}
+
+//-------------------------Main Power Switch-------------------------
+void Utama::on_mainSwitch_toggled(bool checked)
+{
+    bool b = checked;
+    qDebug() << "switch" << b;
+
+    QPalette onSwitch;
+    onSwitch.setColor(QPalette::Button,Qt::green);
+
+    QPalette offSwitch;
+    offSwitch.setColor(QPalette::Button,QColor(53,53,53));
+
+    if(checked)
+    {
+        ui->mainSwitch->setPalette(onSwitch);
+    }
+    else
+    {
+        ui->mainSwitch->setPalette(offSwitch);
+    }
 }
 

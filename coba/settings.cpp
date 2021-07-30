@@ -11,18 +11,26 @@ Settings::Settings(QWidget *parent) :
     setWindowModality(Qt::ApplicationModal);
     setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
     ui->setupUi(this);
+
+    //color for fun
     qApp->setStyle(QStyleFactory::create("Fusion"));
 
     QPalette darkPalette;
     darkPalette.setColor(QPalette::Window, QColor(45,45,45));
     darkPalette.setColor(QPalette::WindowText, Qt::white);
-    darkPalette.setColor(QPalette::Base, QColor(25,25,25));
+    darkPalette.setColor(QPalette::Active,QPalette::Base, QColor(75,75,75));
+    darkPalette.setColor(QPalette::Disabled,QPalette::Base,QColor(148, 148, 148));
     darkPalette.setColor(QPalette::AlternateBase, QColor(53,53,53));
     darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
     darkPalette.setColor(QPalette::ToolTipText, Qt::white);
-    darkPalette.setColor(QPalette::Text, Qt::white);
-    darkPalette.setColor(QPalette::Button, QColor(75,75,75));
-    darkPalette.setColor(QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::Active,QPalette::Text, Qt::white);
+    darkPalette.setColor(QPalette::Disabled,QPalette::Text,QColor(200,200,200));
+    darkPalette.setColor(QPalette::Active,QPalette::Button, QColor(53,53,53));
+    darkPalette.setColor(QPalette::Inactive,QPalette::Button,QColor(148, 148, 148));
+    darkPalette.setColor(QPalette::Disabled,QPalette::Button,QColor(148, 148, 148));
+    darkPalette.setColor(QPalette::Active,QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::Inactive,QPalette::ButtonText,QColor(200,200,200));
+    darkPalette.setColor(QPalette::Disabled,QPalette::ButtonText,QColor(200,200,200));
     darkPalette.setColor(QPalette::BrightText, Qt::red);
     darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
 
@@ -40,48 +48,25 @@ Settings::~Settings()
 }
 
 
+void Settings::prevRange(double v1,double v2,double v3,double v4,double v5,double v6,double v7,double v8,double i1,double i2,double i3,double i4,double i5,double i6,double i7,double i8)
+{
+    ui->I_Ch_1->setValue(i1);
+    ui->I_Ch_2->setValue(i2);
+    ui->I_Ch_3->setValue(i3);
+    ui->I_Ch_4->setValue(i4);
+    ui->I_Ch_5->setValue(i5);
+    ui->I_Ch_6->setValue(i6);
+    ui->I_Ch_7->setValue(i7);
+    ui->I_Ch_8->setValue(i8);
 
-//void Settings::on_V_Ch_1_valueChanged(double arg1)
-//{
-
-//}
-
-void Settings::prevRange(double v1,double v2,double v3,double v4,double v5,double v6,double v7,double v8,double i1,double i2,double i3,double i4,double i5,double i6,double i7,double i8){
-    v1temp = v1;
-    v2temp = v2;
-    v3temp = v3;
-    v4temp = v4;
-    v5temp = v5;
-    v6temp = v6;
-    v7temp = v7;
-    v8temp = v8;
-
-    i1temp = i1;
-    i2temp = i2;
-    i3temp = i3;
-    i4temp = i4;
-    i5temp = i5;
-    i6temp = i6;
-    i7temp = i7;
-    i8temp = i8;
-
-    ui->I_Ch_1->setValue(i1temp);
-    ui->I_Ch_2->setValue(i2temp);
-    ui->I_Ch_3->setValue(i3temp);
-    ui->I_Ch_4->setValue(i4temp);
-    ui->I_Ch_5->setValue(i5temp);
-    ui->I_Ch_6->setValue(i6temp);
-    ui->I_Ch_7->setValue(i7temp);
-    ui->I_Ch_8->setValue(i8temp);
-
-    ui->V_Ch_1->setValue(v1temp);
-    ui->V_Ch_2->setValue(v2temp);
-    ui->V_Ch_3->setValue(v3temp);
-    ui->V_Ch_4->setValue(v4temp);
-    ui->V_Ch_5->setValue(v5temp);
-    ui->V_Ch_6->setValue(v6temp);
-    ui->V_Ch_7->setValue(v7temp);
-    ui->V_Ch_8->setValue(v8temp);
+    ui->V_Ch_1->setValue(v1);
+    ui->V_Ch_2->setValue(v2);
+    ui->V_Ch_3->setValue(v3);
+    ui->V_Ch_4->setValue(v4);
+    ui->V_Ch_5->setValue(v5);
+    ui->V_Ch_6->setValue(v6);
+    ui->V_Ch_7->setValue(v7);
+    ui->V_Ch_8->setValue(v8);
 }
 
 void Settings::on_defaultButton_clicked()

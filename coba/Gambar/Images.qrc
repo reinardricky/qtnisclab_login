@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/Images">
+        <file>mastercard.png</file>
+        <file>visa.png</file>
+        <file>nicslab-4bd3e3b59f11ba18bb60b48d098d162a329e2d36ca8e436e0ccbedef41d86318.png</file>
+    </qresource>
+</RCC>

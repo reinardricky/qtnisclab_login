@@ -150,6 +150,8 @@ private slots:
     void i8_range_changed(double arg1);
 
 
+    void on_mainSwitch_toggled(bool checked);
+
 private:
     Ui::Utama *ui;
     Settings *msettings;

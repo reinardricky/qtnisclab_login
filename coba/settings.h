@@ -26,52 +26,12 @@ private slots:
 
     void on_buttonBox_accepted();
 
-//    void on_buttonBox_rejected();
-
-//    void on_V_Ch_1_editingFinished();
-
-//    void on_V_Ch_2_editingFinished();
-
-//    void on_V_Ch_3_editingFinished();
-
-//    void on_V_Ch_4_editingFinished();
-
-//    void on_V_Ch_5_editingFinished();
-
-//    void on_V_Ch_6_editingFinished();
-
-//    void on_V_Ch_7_editingFinished();
-
-//    void on_V_Ch_8_editingFinished();
-
-//    void on_I_Ch_1_editingFinished();
-
-//    void on_I_Ch_2_editingFinished();
-
-//    void on_I_Ch_3_editingFinished();
-
-//    void on_I_Ch_4_editingFinished();
-
-//    void on_I_Ch_5_editingFinished();
-
-//    void on_I_Ch_6_editingFinished();
-
-//    void on_I_Ch_7_editingFinished();
-
-//    void on_I_Ch_8_editingFinished();
-
 private:
     Ui::Settings *ui;
 
     void setDefault();
 
     void checkDefault();
-
-    double v1temp,v2temp,v3temp,v4temp,v5temp,v6temp,v7temp,v8temp;
-    double i1temp,i2temp,i3temp,i4temp,i5temp,i6temp,i7temp,i8temp;
-
-//    double v1val,v2val,v3val,v4val,v5val,v6val,v7val,v8val;
-//    double i1val,i2val,i3val,i4val,i5val,i6val,i7val,i8val;
 
 signals:
     void v1_range_changed(double arg1);
