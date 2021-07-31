@@ -34,3 +34,9 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Gambar/Images.qrc
+
+DISTFILES += \
+    ../../6245215-e74b6af3561bd76f7b92b8ee3c71064dfbdde43c/Qt 5 Dark Fusion Palette
