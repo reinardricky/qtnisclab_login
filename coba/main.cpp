@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 //    label ->show();
 
     //uncomment to open which window first
-    MainWindow w; //login window
+//    MainWindow w; //login window
 //    PaymentWindow w; //credit card window
 //    Settings w; //settings window
 //    Subscribe w; //subscription choice window
-//    Utama w; //main menu
+    Utama w; //main menu
 
     w.show();
     return a.exec();
