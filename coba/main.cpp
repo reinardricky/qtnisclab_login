@@ -3,6 +3,8 @@
 #include "settings.h"
 #include "subscribe.h"
 #include "utama.h"
+#include "purchasewindow.h"
+#include "licensewindow.h"
 
 #include <QApplication>
 #include <QLabel>
@@ -20,7 +22,8 @@ int main(int argc, char *argv[])
 //    PaymentWindow w; //credit card window
 //    Settings w; //settings window
 //    Subscribe w; //subscription choice window
-    Utama w; //main menu
+//    Utama w; //main menu
+      PurchaseWindow w;
 
     w.show();
     return a.exec();

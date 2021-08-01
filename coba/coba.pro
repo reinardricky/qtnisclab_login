@@ -9,22 +9,28 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    licensewindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    purchasewindow.cpp \
     subscribe.cpp \
     utama.cpp\
     settings.cpp\
     paymentwindow.cpp
 
 HEADERS += \
+    licensewindow.h \
     mainwindow.h \
+    purchasewindow.h \
     subscribe.h \
     utama.h\
     settings.h\
     paymentwindow.h
 
 FORMS += \
+    licensewindow.ui \
     mainwindow.ui \
+    purchasewindow.ui \
     subscribe.ui \
     utama.ui\
     settings.ui\
